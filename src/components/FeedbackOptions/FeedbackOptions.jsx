@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { buttonsName } from '../helper';
 import { ButtonList, ButtonItem, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -14,10 +15,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     </ButtonList>
   );
 };
-
-function buttonsName(name) {
-  return `${name[0].toUpperCase()}${name.slice(1, name.length)}`;
-}
 
 
 FeedbackOptions.propTypes = {

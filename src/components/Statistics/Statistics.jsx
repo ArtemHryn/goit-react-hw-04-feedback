@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import {buttonsName} from '../helper'
 import { StatItem, Stat } from './Statistics.styled';
 
 export const Statistics = props => {
@@ -18,10 +19,6 @@ export const Statistics = props => {
     </ul>
   );
 };
-
-function buttonsName(name) {
-  return `${name[0].toUpperCase()}${name.slice(1, name.length)}`;
-}
 
 Statistics.propTypes = {
   props: PropTypes.exact({
