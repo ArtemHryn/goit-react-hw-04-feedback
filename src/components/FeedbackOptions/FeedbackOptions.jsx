@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ButtonList, ButtonItem, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -14,6 +15,12 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
-function  buttonsName (name) {
-    return `${name[0].toUpperCase()}${name.slice(1, name.length)}`;
-  };
+function buttonsName(name) {
+  return `${name[0].toUpperCase()}${name.slice(1, name.length)}`;
+}
+
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string,).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
